@@ -1,4 +1,5 @@
 import { Handshake, Eye, Star, ShieldCheck, Sparkles } from "lucide-react";
+import AnimatedSection from "./AnimatedSection";
 
 const values = [
   { icon: Handshake, title: "Solidariedade", text: "Acreditamos que ajudar o próximo é o caminho para um mundo melhor." },
@@ -10,20 +11,29 @@ const values = [
 
 const ValuesSection = () => {
   return (
-    <section className="py-20 bg-background">
+    <section className="py-24 bg-background overflow-hidden">
       <div className="container mx-auto px-4">
-        <h2 className="font-heading font-black text-3xl sm:text-4xl text-foreground text-center mb-12">
-          Nossos valores
-        </h2>
+        <AnimatedSection>
+          <div className="text-center mb-14">
+            <span className="inline-block px-4 py-1.5 rounded-full bg-secondary/10 text-secondary font-heading font-bold text-sm mb-4">
+              O que nos guia
+            </span>
+            <h2 className="font-heading font-black text-3xl sm:text-4xl text-foreground">
+              Nossos valores
+            </h2>
+          </div>
+        </AnimatedSection>
         <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
           {values.map((v, i) => (
-            <div key={i} className="bg-card rounded-2xl p-6 border border-border text-center hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                <v.icon className="w-6 h-6 text-primary" />
+            <AnimatedSection key={i} delay={i * 0.1}>
+              <div className="group bg-card rounded-2xl p-6 border border-border text-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 h-full">
+                <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-500">
+                  <v.icon className="w-7 h-7 text-primary group-hover:text-primary-foreground transition-colors duration-500" />
+                </div>
+                <h3 className="font-heading font-bold text-foreground mb-2">{v.title}</h3>
+                <p className="font-body text-sm text-muted-foreground">{v.text}</p>
               </div>
-              <h3 className="font-heading font-bold text-foreground mb-2">{v.title}</h3>
-              <p className="font-body text-sm text-muted-foreground">{v.text}</p>
-            </div>
+            </AnimatedSection>
           ))}
         </div>
       </div>
