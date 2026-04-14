@@ -21,13 +21,12 @@ const HeroSection = () => {
         </span>
 
         <h1 className="font-heading font-black text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-primary-foreground leading-[1.1] mb-6 max-w-3xl">
-          Realizando sonhos através de{" "}
-          <span className="text-primary">viagens inesquecíveis</span>
+          Viagens que{" "}
+          <span className="text-primary">transformam</span> vidas
         </h1>
 
         <p className="font-body text-lg sm:text-xl text-primary-foreground/85 max-w-2xl mb-10 leading-relaxed">
-          Acreditamos que todos merecem viver experiências que transformam.
-          Proporcionamos viagens acessíveis com momentos únicos para quem mais precisa.
+          Acreditamos que todos merecem viver experiências únicas e marcantes. Proporcionamos viagens acessíveis com momentos inesquecíveis para quem mais precisa — porque viajar não é luxo, é direito.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4">
