@@ -15,8 +15,8 @@ const HeroSection = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-foreground/80 via-foreground/50 to-transparent" />
       </motion.div>
 
-      <div className="relative z-10 container mx-auto px-4 sm:px-8 py-20">
-        <div className="max-w-2xl">
+      <div className="relative z-10 container mx-auto px-4 sm:px-8 py-20 flex justify-center text-center">
+        <div className="max-w-2xl flex flex-col items-center">
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
