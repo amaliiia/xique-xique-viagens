@@ -26,7 +26,7 @@ const HeroSection = () => {
         </h1>
 
         <p className="font-body text-lg sm:text-xl text-primary-foreground/85 max-w-2xl mb-10 leading-relaxed">
-          Acreditamos que todos merecem viver experiências únicas e marcantes. Proporcionamos viagens acessíveis com momentos inesquecíveis para quem mais precisa — porque viajar não é luxo, é direito.
+          Experiências únicas e marcantes para quem mais precisa. Porque viajar não é luxo — é direito.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4">
