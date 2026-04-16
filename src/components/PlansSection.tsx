@@ -1,64 +1,28 @@
-import { Check, Utensils, BedDouble, MapPin } from "lucide-react";
+import { Heart, Wallet, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
 import AnimatedSection from "./AnimatedSection";
+import plansFamily from "@/assets/plans-family.jpg";
+import plansTravel from "@/assets/plans-travel.jpg";
+import plansItinerary from "@/assets/plans-itinerary.jpg";
 
-const plans = [
+const highlights = [
   {
-    name: "Plano C",
-    subtitle: "Essencial",
-    price: "R$ 89",
-    period: "/mês no carnê",
-    color: "border-secondary",
-    bg: "bg-secondary/5",
-    badge: null,
-    features: [
-      "Viagem de 3 dias",
-      "Hospedagem compartilhada",
-      "1 refeição por dia inclusa",
-      "1 experiência cultural",
-      "Transporte incluso",
-    ],
-    costs: { hospedagem: "Inclusa", alimentacao: "1 refeição/dia", experiencias: "1 passeio" },
-    payment: "Até 12x no carnê",
+    icon: Heart,
+    image: plansFamily,
+    title: "Planos para todos os bolsos",
+    text: "Temos três planos de viagem: o Plano C, o Plano D e o Plano E. Cada um foi pensado para caber na realidade de diferentes famílias. Não importa quanto você ganha — existe um plano que é a sua cara.",
   },
   {
-    name: "Plano D",
-    subtitle: "Conforto",
-    price: "R$ 149",
-    period: "/mês no carnê",
-    color: "border-primary",
-    bg: "bg-primary/5",
-    badge: "Mais escolhido",
-    features: [
-      "Viagem de 5 dias",
-      "Hospedagem em pousada",
-      "Todas as refeições inclusas",
-      "3 experiências culturais",
-      "Transporte + seguro viagem",
-      "Guia acompanhante",
-    ],
-    costs: { hospedagem: "Inclusa", alimentacao: "Todas inclusas", experiencias: "3 passeios" },
-    payment: "Até 18x no carnê",
+    icon: Wallet,
+    image: plansTravel,
+    title: "Pagamento fácil e sem aperto",
+    text: "Nossos preços são acessíveis e o pagamento é facilitado no carnê, dividido em parcelas pequenas que cabem na sua rotina. Você paga aos poucos, sem sufoco, e realiza o sonho de viajar com tranquilidade.",
   },
   {
-    name: "Plano E",
-    subtitle: "Completo",
-    price: "R$ 219",
-    period: "/mês no carnê",
-    color: "border-primary",
-    bg: "bg-primary/5",
-    badge: "Premium",
-    features: [
-      "Viagem de 7 dias",
-      "Hospedagem em hotel",
-      "Todas as refeições + lanches",
-      "5 experiências exclusivas",
-      "Transporte + seguro completo",
-      "Guia + kit de viagem",
-      "Fotos profissionais",
-    ],
-    costs: { hospedagem: "Inclusa", alimentacao: "Completa", experiencias: "5 passeios" },
-    payment: "Até 24x no carnê",
+    icon: MapPin,
+    image: plansItinerary,
+    title: "Roteiro completo, sem surpresas",
+    text: "A gente organiza tudo para você: o roteiro da viagem, os passeios, a hospedagem e a alimentação. Você recebe um planejamento com todas as experiências e custos, para saber exatamente o que vai viver — sem susto no bolso.",
   },
 ];
 
@@ -67,74 +31,75 @@ const PlansSection = () => {
     <section id="planos" className="py-24 bg-accent overflow-hidden">
       <div className="container mx-auto px-4">
         <AnimatedSection>
-          <div className="text-center mb-14">
+          <div className="text-center mb-6">
             <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary font-heading font-bold text-sm mb-4">
-              Planos acessíveis
+              Nossos planos de viagem
             </span>
             <h2 className="font-heading font-black text-3xl sm:text-4xl text-foreground mb-4">
-              Planos de viagem
+              Como funciona?
             </h2>
-            <p className="font-body text-lg text-muted-foreground max-w-2xl mx-auto">
-              Escolha o plano que cabe no seu bolso. Todos incluem o orçamento detalhado dos custos. Pagamento facilitado em carnê!
+            <p className="font-body text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              A Xique Xique existe para tornar a viagem possível para todo mundo. A gente cuida de tudo — do planejamento ao pagamento — para que você só precise se preocupar em aproveitar cada momento.
             </p>
           </div>
         </AnimatedSection>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {plans.map((plan, i) => (
-            <AnimatedSection key={i} delay={i * 0.15}>
-              <motion.div
-                whileHover={{ y: -8 }}
-                transition={{ type: "spring", stiffness: 300 }}
-                className={`relative bg-card rounded-3xl p-8 border-2 ${plan.color} shadow-md hover:shadow-2xl transition-shadow flex flex-col h-full`}
-              >
-                {plan.badge && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-5 py-1.5 rounded-full bg-primary text-primary-foreground font-heading font-bold text-sm shadow-lg shadow-primary/30">
-                    {plan.badge}
-                  </div>
-                )}
-                <div className="text-center mb-6">
-                  <h3 className="font-heading font-black text-2xl text-foreground">{plan.name}</h3>
-                  <p className="text-muted-foreground font-body">{plan.subtitle}</p>
-                  <div className="mt-4">
-                    <span className="font-heading font-black text-4xl text-primary">{plan.price}</span>
-                    <span className="text-muted-foreground font-body text-sm">{plan.period}</span>
-                  </div>
-                  <p className="text-sm text-secondary font-bold mt-1">{plan.payment}</p>
-                </div>
+        <div className="max-w-5xl mx-auto mt-14 space-y-20">
+          {highlights.map((item, i) => {
+            const Icon = item.icon;
+            const isReversed = i % 2 !== 0;
 
-                <ul className="space-y-3 mb-6 flex-1">
-                  {plan.features.map((f, j) => (
-                    <li key={j} className="flex items-start gap-2 text-foreground font-body">
-                      <Check className="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" />
-                      <span>{f}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                <div className={`rounded-xl p-4 ${plan.bg} mb-6`}>
-                  <p className="font-heading font-bold text-sm text-foreground mb-2">Orçamento incluso:</p>
-                  <div className="space-y-1 text-sm font-body text-muted-foreground">
-                    <div className="flex items-center gap-2"><BedDouble className="w-4 h-4" /> Hospedagem: {plan.costs.hospedagem}</div>
-                    <div className="flex items-center gap-2"><Utensils className="w-4 h-4" /> Alimentação: {plan.costs.alimentacao}</div>
-                    <div className="flex items-center gap-2"><MapPin className="w-4 h-4" /> Experiências: {plan.costs.experiencias}</div>
-                  </div>
-                </div>
-
-                <motion.a
-                  href="https://wa.me/5585999999999?text=Olá! Tenho interesse no "
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  whileHover={{ scale: 1.03 }}
-                  whileTap={{ scale: 0.97 }}
-                  className="block w-full text-center py-3.5 rounded-full bg-primary text-primary-foreground font-heading font-bold shadow-lg shadow-primary/20"
+            return (
+              <AnimatedSection key={i} delay={i * 0.1}>
+                <div
+                  className={`flex flex-col ${isReversed ? "md:flex-row-reverse" : "md:flex-row"} items-center gap-10`}
                 >
-                  Quero esse plano!
-                </motion.a>
-              </motion.div>
-            </AnimatedSection>
-          ))}
+                  <motion.div
+                    whileHover={{ scale: 1.03 }}
+                    transition={{ type: "spring", stiffness: 300 }}
+                    className="w-full md:w-1/2 rounded-3xl overflow-hidden shadow-lg"
+                  >
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      loading="lazy"
+                      width={800}
+                      height={600}
+                      className="w-full h-64 sm:h-72 object-cover"
+                    />
+                  </motion.div>
+
+                  <div className="w-full md:w-1/2 space-y-4">
+                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10">
+                      <Icon className="w-5 h-5 text-primary" />
+                      <span className="font-heading font-bold text-primary text-sm">
+                        {item.title}
+                      </span>
+                    </div>
+                    <p className="font-body text-foreground text-lg leading-relaxed">
+                      {item.text}
+                    </p>
+                  </div>
+                </div>
+              </AnimatedSection>
+            );
+          })}
         </div>
+
+        <AnimatedSection delay={0.3}>
+          <div className="text-center mt-16">
+            <motion.a
+              href="https://wa.me/5585999999999?text=Olá! Quero saber mais sobre os planos de viagem!"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.97 }}
+              className="inline-block px-10 py-4 rounded-full bg-primary text-primary-foreground font-heading font-bold text-lg shadow-lg shadow-primary/30 hover:brightness-110 transition-all"
+            >
+              Fale conosco e escolha seu plano
+            </motion.a>
+          </div>
+        </AnimatedSection>
       </div>
     </section>
   );

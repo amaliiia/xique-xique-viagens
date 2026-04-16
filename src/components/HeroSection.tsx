@@ -34,13 +34,13 @@ const HeroSection = () => {
             href="#planos"
             className="px-8 py-4 rounded-full bg-primary text-primary-foreground font-heading font-bold text-lg shadow-lg shadow-primary/30 text-center hover:brightness-110 transition-all"
           >
-            Conheça nossos planos
+            Quero viajar
           </a>
           <a
             href="#sobre"
             className="px-8 py-4 rounded-full border-2 border-primary-foreground/40 text-primary-foreground font-heading font-bold text-lg hover:bg-primary-foreground/10 transition-colors text-center backdrop-blur-sm"
           >
-            Saiba mais
+            Quero ser empresa anjo
           </a>
         </div>
       </div>
