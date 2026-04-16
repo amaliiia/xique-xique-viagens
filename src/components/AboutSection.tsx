@@ -41,15 +41,17 @@ const AboutSection = () => {
           </div>
         </AnimatedSection>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-20">
+        <div className="max-w-4xl mx-auto mb-20 space-y-6">
           {cards.map((card, i) => (
             <AnimatedSection key={i} delay={i * 0.15}>
-              <div className="group bg-card rounded-2xl p-8 border border-border text-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 h-full">
-                <div className={`w-16 h-16 rounded-2xl ${card.secondary ? "bg-secondary/10" : "bg-accent"} flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-500`}>
-                  <card.icon className={`w-8 h-8 ${card.secondary ? "text-secondary" : "text-primary"}`} />
+              <div className="group flex items-start gap-6 bg-card rounded-2xl p-6 sm:p-8 border-l-4 border-primary hover:border-secondary hover:bg-accent/50 transition-all duration-500">
+                <div className={`shrink-0 w-14 h-14 rounded-xl ${card.secondary ? "bg-secondary/10" : "bg-primary/10"} flex items-center justify-center group-hover:scale-110 transition-transform duration-500`}>
+                  <card.icon className={`w-7 h-7 ${card.secondary ? "text-secondary" : "text-primary"}`} />
                 </div>
-                <h3 className="font-heading font-bold text-xl text-foreground mb-3">{card.title}</h3>
-                <p className="font-body text-muted-foreground leading-relaxed">{card.text}</p>
+                <div>
+                  <h3 className="font-heading font-bold text-xl text-foreground mb-2">{card.title}</h3>
+                  <p className="font-body text-muted-foreground leading-relaxed">{card.text}</p>
+                </div>
               </div>
             </AnimatedSection>
           ))}
