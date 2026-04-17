@@ -1,6 +1,7 @@
 import { Heart, Users, Leaf } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
 import CounterAnimation from "./CounterAnimation";
+import aboutBusTrip from "@/assets/about-bus-trip.jpg";
 
 const cards = [
   {
@@ -17,7 +18,6 @@ const cards = [
     icon: Leaf,
     title: "Impacto socioambiental",
     text: "Nossas viagens promovem o turismo sustentável, valorizando comunidades locais e preservando o meio ambiente.",
-    secondary: true,
   },
 ];
 
@@ -41,20 +41,52 @@ const AboutSection = () => {
           </div>
         </AnimatedSection>
 
-        <div className="max-w-4xl mx-auto mb-20 space-y-6">
-          {cards.map((card, i) => (
-            <AnimatedSection key={i} delay={i * 0.15}>
-              <div className="group flex items-start gap-6 bg-card rounded-2xl p-6 sm:p-8 border-l-4 border-primary hover:border-secondary hover:bg-accent/50 transition-all duration-500">
-                <div className={`shrink-0 w-14 h-14 rounded-xl ${card.secondary ? "bg-secondary/10" : "bg-primary/10"} flex items-center justify-center group-hover:scale-110 transition-transform duration-500`}>
-                  <card.icon className={`w-7 h-7 ${card.secondary ? "text-secondary" : "text-primary"}`} />
-                </div>
-                <div>
-                  <h3 className="font-heading font-bold text-xl text-foreground mb-2">{card.title}</h3>
-                  <p className="font-body text-muted-foreground leading-relaxed">{card.text}</p>
-                </div>
+        {/* Image + cards layout */}
+        <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto mb-20">
+          <AnimatedSection>
+            <div className="relative">
+              <div className="absolute -top-4 -left-4 w-24 h-24 bg-primary/20 rounded-2xl -z-10" />
+              <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-secondary/20 rounded-full -z-10" />
+              <img
+                src={aboutBusTrip}
+                alt="Famílias de baixa renda sorrindo durante uma viagem de ônibus pelo Nordeste"
+                width={1280}
+                height={896}
+                loading="lazy"
+                className="relative rounded-3xl shadow-2xl w-full h-auto object-cover aspect-[4/3]"
+              />
+              <div className="absolute bottom-6 left-6 right-6 bg-background/95 backdrop-blur-sm rounded-2xl p-4 shadow-xl">
+                <p className="font-heading font-bold text-foreground text-sm sm:text-base">
+                  "Viajar transforma vidas — e nós tornamos isso possível."
+                </p>
               </div>
-            </AnimatedSection>
-          ))}
+            </div>
+          </AnimatedSection>
+
+          <div className="space-y-5">
+            {cards.map((card, i) => (
+              <AnimatedSection key={i} delay={i * 0.15}>
+                <div className="group relative flex items-start gap-5 p-5 rounded-2xl hover:bg-accent/40 transition-all duration-500">
+                  <div className="shrink-0 relative">
+                    <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
+                      <card.icon className="w-6 h-6 text-primary-foreground" />
+                    </div>
+                    {i < cards.length - 1 && (
+                      <div className="absolute left-1/2 top-12 w-0.5 h-12 bg-gradient-to-b from-primary/40 to-transparent -translate-x-1/2" />
+                    )}
+                  </div>
+                  <div className="pt-1">
+                    <h3 className="font-heading font-bold text-lg text-foreground mb-1.5">
+                      {card.title}
+                    </h3>
+                    <p className="font-body text-muted-foreground leading-relaxed text-sm sm:text-base">
+                      {card.text}
+                    </p>
+                  </div>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
         </div>
 
         {/* Counters */}
