@@ -28,7 +28,7 @@ const highlights = [
 
 const PlansSection = () => {
   return (
-    <section id="planos" className="relative py-24 overflow-hidden bg-gradient-to-br from-primary/10 via-accent to-secondary/10">
+    <section id="planos" className="relative py-24 overflow-hidden bg-gradient-to-br from-primary/20 via-accent to-secondary/20">
       {/* Decorative blobs */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/15 rounded-full blur-3xl -z-0" aria-hidden="true" />
       <div className="absolute bottom-0 left-0 w-[450px] h-[450px] bg-secondary/15 rounded-full blur-3xl -z-0" aria-hidden="true" />

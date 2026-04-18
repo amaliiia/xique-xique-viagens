@@ -11,7 +11,7 @@ const values = [
 
 const ValuesSection = () => {
   return (
-    <section className="relative py-24 overflow-hidden bg-gradient-to-tl from-secondary/15 via-accent/30 to-background">
+    <section className="relative py-24 overflow-hidden bg-gradient-to-tl from-secondary/25 via-accent to-primary/15">
       {/* Decorative shapes */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl -z-0" aria-hidden="true" />
       <div className="absolute top-10 right-10 w-40 h-40 bg-secondary/15 rounded-3xl rotate-12 blur-2xl -z-0" aria-hidden="true" />
