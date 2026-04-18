@@ -28,8 +28,19 @@ const highlights = [
 
 const PlansSection = () => {
   return (
-    <section id="planos" className="py-24 bg-accent overflow-hidden">
-      <div className="container mx-auto px-4">
+    <section id="planos" className="relative py-24 overflow-hidden bg-gradient-to-br from-primary/10 via-accent to-secondary/10">
+      {/* Decorative blobs */}
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/15 rounded-full blur-3xl -z-0" aria-hidden="true" />
+      <div className="absolute bottom-0 left-0 w-[450px] h-[450px] bg-secondary/15 rounded-full blur-3xl -z-0" aria-hidden="true" />
+      <div
+        className="absolute inset-0 opacity-[0.04] -z-0"
+        aria-hidden="true"
+        style={{
+          backgroundImage: `radial-gradient(hsl(var(--primary)) 1px, transparent 1px)`,
+          backgroundSize: "32px 32px",
+        }}
+      />
+      <div className="container relative mx-auto px-4">
         <AnimatedSection>
           <div className="text-center mb-6">
             <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary font-heading font-bold text-sm mb-4">
