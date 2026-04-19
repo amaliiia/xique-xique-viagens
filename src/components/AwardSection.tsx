@@ -4,10 +4,21 @@ import AnimatedSection from "./AnimatedSection";
 
 const AwardSection = () => {
   return (
-    <section className="py-16 bg-accent overflow-hidden">
-      <div className="container mx-auto px-4">
+    <section className="py-16 bg-gradient-to-br from-secondary/20 via-accent to-primary/15 overflow-hidden relative">
+      {/* Background decorative elements */}
+      <div className="absolute top-10 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-10 right-10 w-80 h-80 bg-secondary/15 rounded-full blur-3xl pointer-events-none" />
+      <div
+        className="absolute inset-0 opacity-[0.04] pointer-events-none"
+        style={{
+          backgroundImage: `radial-gradient(circle, hsl(var(--primary)) 1px, transparent 1px)`,
+          backgroundSize: "24px 24px",
+        }}
+      />
+
+      <div className="container mx-auto px-4 relative z-10">
         <AnimatedSection>
-          <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-8 bg-card rounded-3xl p-8 md:p-12 shadow-xl border border-border relative overflow-hidden">
+          <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-8 bg-card/90 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-xl border border-border relative overflow-hidden">
             {/* Decorative gradient */}
             <div className="absolute -top-20 -right-20 w-60 h-60 bg-primary/5 rounded-full blur-3xl" />
             <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-secondary/5 rounded-full blur-3xl" />
