@@ -11,19 +11,7 @@ const values = [
 
 const ValuesSection = () => {
   return (
-    <section className="relative py-24 overflow-hidden bg-gradient-to-br from-primary/15 via-accent to-secondary/20">
-      {/* Decorative shapes */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-secondary/10 rounded-full blur-3xl -z-0" aria-hidden="true" />
-      <div className="absolute top-20 right-20 w-48 h-48 bg-primary/15 rounded-full blur-3xl -z-0" aria-hidden="true" />
-      <div className="absolute bottom-20 left-20 w-64 h-64 bg-secondary/15 rounded-3xl -rotate-12 blur-3xl -z-0" aria-hidden="true" />
-      <div
-        className="absolute inset-0 opacity-[0.05] -z-0"
-        aria-hidden="true"
-        style={{
-          backgroundImage: `radial-gradient(circle, hsl(var(--primary)) 1.2px, transparent 1.2px)`,
-          backgroundSize: "28px 28px",
-        }}
-      />
+    <section className="relative py-24 overflow-hidden bg-muted/30">
       <div className="container relative mx-auto px-4">
         <AnimatedSection>
           <div className="text-center mb-14">
