@@ -4,7 +4,7 @@ import AnimatedSection from "./AnimatedSection";
 
 const AwardSection = () => {
   return (
-    <section className="py-16 overflow-hidden relative bg-gradient-to-br from-primary via-primary/90 to-primary/70">
+    <section className="py-16 overflow-hidden relative bg-gradient-to-br from-primary/30 via-primary/20 to-primary/15">
       {/* Spotlight radial glow */}
       <div
         className="absolute inset-0 pointer-events-none"
