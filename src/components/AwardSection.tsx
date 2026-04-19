@@ -4,15 +4,33 @@ import AnimatedSection from "./AnimatedSection";
 
 const AwardSection = () => {
   return (
-    <section className="py-16 bg-gradient-to-br from-secondary/20 via-accent to-primary/15 overflow-hidden relative">
-      {/* Background decorative elements */}
-      <div className="absolute top-10 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-10 right-10 w-80 h-80 bg-secondary/15 rounded-full blur-3xl pointer-events-none" />
+    <section className="py-16 overflow-hidden relative bg-gradient-to-br from-primary via-primary/90 to-primary/70">
+      {/* Spotlight radial glow */}
       <div
-        className="absolute inset-0 opacity-[0.04] pointer-events-none"
+        className="absolute inset-0 pointer-events-none"
         style={{
-          backgroundImage: `radial-gradient(circle, hsl(var(--primary)) 1px, transparent 1px)`,
-          backgroundSize: "24px 24px",
+          background:
+            "radial-gradient(ellipse at center, hsl(var(--award-gold) / 0.35) 0%, transparent 60%)",
+        }}
+      />
+      {/* Gold decorative blobs */}
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-award-gold/25 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-award-gold/20 rounded-full blur-3xl pointer-events-none" />
+
+      {/* Subtle diagonal shine pattern */}
+      <div
+        className="absolute inset-0 opacity-[0.08] pointer-events-none"
+        style={{
+          backgroundImage: `repeating-linear-gradient(45deg, hsl(var(--award-gold)) 0px, hsl(var(--award-gold)) 1px, transparent 1px, transparent 22px)`,
+        }}
+      />
+
+      {/* Sparkle dots */}
+      <div
+        className="absolute inset-0 opacity-[0.12] pointer-events-none"
+        style={{
+          backgroundImage: `radial-gradient(circle, hsl(var(--award-gold)) 1.5px, transparent 1.5px)`,
+          backgroundSize: "48px 48px",
         }}
       />
 
