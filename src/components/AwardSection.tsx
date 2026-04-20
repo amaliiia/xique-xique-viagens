@@ -4,35 +4,6 @@ import AnimatedSection from "./AnimatedSection";
 
 const AwardSection = () => {
   return (
-    <section className="py-16 overflow-hidden relative bg-gradient-to-br from-primary/30 via-primary/20 to-primary/15">
-      {/* Spotlight radial glow */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background:
-            "radial-gradient(ellipse at center, hsl(var(--award-gold) / 0.35) 0%, transparent 60%)",
-        }}
-      />
-      {/* Gold decorative blobs */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-award-gold/25 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-award-gold/20 rounded-full blur-3xl pointer-events-none" />
-
-      {/* Subtle diagonal shine pattern */}
-      <div
-        className="absolute inset-0 opacity-[0.08] pointer-events-none"
-        style={{
-          backgroundImage: `repeating-linear-gradient(45deg, hsl(var(--award-gold)) 0px, hsl(var(--award-gold)) 1px, transparent 1px, transparent 22px)`,
-        }}
-      />
-
-      {/* Sparkle dots */}
-      <div
-        className="absolute inset-0 opacity-[0.12] pointer-events-none"
-        style={{
-          backgroundImage: `radial-gradient(circle, hsl(var(--award-gold)) 1.5px, transparent 1.5px)`,
-          backgroundSize: "48px 48px",
-        }}
-      />
     <section className="py-16 overflow-hidden relative bg-gradient-to-br from-award-orange/40 via-award-orange/25 to-award-orange/15">
       {/* Spotlight radial glow - laranja vibrante */}
       <div
@@ -88,7 +59,7 @@ const AwardSection = () => {
                 2° lugar em negócios de impacto do Ceará
               </h2>
               <p className="font-body text-muted-foreground text-lg leading-relaxed">
-                Fomos reconhecidos internacionalmente como o segundo melhor negócio de impacto social do estado do Ceará. 
+                Fomos reconhecidos internacionalmente como o segundo melhor negócio de impacto social do estado do Ceará.
                 Esse prêmio mostra que nosso trabalho faz diferença de verdade na vida das pessoas.
               </p>
             </div>
