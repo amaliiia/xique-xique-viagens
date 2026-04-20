@@ -33,6 +33,35 @@ const AwardSection = () => {
           backgroundSize: "48px 48px",
         }}
       />
+    <section className="py-16 overflow-hidden relative bg-gradient-to-br from-award-orange/40 via-award-orange/25 to-award-orange/15">
+      {/* Spotlight radial glow - laranja vibrante */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(ellipse at center, hsl(25 100% 65% / 0.45) 0%, transparent 65%)",
+        }}
+      />
+      {/* Laranja decorative blobs */}
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-award-orange/35 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-award-orange/30 rounded-full blur-3xl pointer-events-none" />
+
+      {/* Subtle diagonal shine pattern - laranja */}
+      <div
+        className="absolute inset-0 opacity-[0.12] pointer-events-none"
+        style={{
+          backgroundImage: `repeating-linear-gradient(45deg, hsl(25 100% 65%) 0px, hsl(25 100% 65%) 1px, transparent 1px, transparent 22px)`,
+        }}
+      />
+
+      {/* Sparkle dots - laranja */}
+      <div
+        className="absolute inset-0 opacity-[0.15] pointer-events-none"
+        style={{
+          backgroundImage: `radial-gradient(circle, hsl(25 100% 70%) 1.5px, transparent 1.5px)`,
+          backgroundSize: "48px 48px",
+        }}
+      />
 
       <div className="container mx-auto px-4 relative z-10">
         <AnimatedSection>
