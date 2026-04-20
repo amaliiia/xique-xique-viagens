@@ -41,7 +41,7 @@ const TestimonialsSection = () => {
   const current = testimonials[active];
 
   return (
-    <section id="depoimentos" className="py-24 bg-muted/30 overflow-hidden relative">
+    <section id="depoimentos" className="py-24 bg-background overflow-hidden relative">
       {/* Decorative blobs */}
       <div className="absolute top-20 -left-20 w-72 h-72 rounded-full bg-primary/5 blur-3xl pointer-events-none" />
       <div className="absolute bottom-20 -right-20 w-96 h-96 rounded-full bg-award-gold/5 blur-3xl pointer-events-none" />

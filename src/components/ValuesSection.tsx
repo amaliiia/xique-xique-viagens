@@ -11,7 +11,7 @@ const values = [
 
 const ValuesSection = () => {
   return (
-    <section className="relative py-24 overflow-hidden bg-muted/30">
+    <section className="relative py-24 overflow-hidden bg-background">
       <div className="container relative mx-auto px-4">
         <AnimatedSection>
           <div className="text-center mb-14">
