@@ -23,18 +23,7 @@ const cards = [
 
 const AboutSection = () => {
   return (
-    <section id="sobre" className="relative py-24 overflow-hidden bg-gradient-to-br from-accent/60 via-background to-secondary/5">
-      {/* Decorative blobs */}
-      <div className="absolute top-20 -left-20 w-72 h-72 bg-primary/8 rounded-full blur-3xl -z-0" aria-hidden="true" />
-      <div className="absolute bottom-20 -right-20 w-96 h-96 bg-secondary/8 rounded-full blur-3xl -z-0" aria-hidden="true" />
-      <div
-        className="absolute inset-0 opacity-[0.03] -z-0"
-        aria-hidden="true"
-        style={{
-          backgroundImage: `radial-gradient(hsl(var(--foreground)) 1px, transparent 1px)`,
-          backgroundSize: "24px 24px",
-        }}
-      />
+    <section id="sobre" className="relative py-24 overflow-hidden bg-background">
       <div className="container relative mx-auto px-4">
         <AnimatedSection>
           <div className="text-center mb-16">
