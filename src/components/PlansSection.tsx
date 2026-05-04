@@ -2,7 +2,7 @@ import { Heart, Wallet, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
 import AnimatedSection from "./AnimatedSection";
 import plansFamily from "@/assets/plans-family.jpg";
-import plansTravel from "@/assets/plans-travel.jpg";
+import plansPayment from "@/assets/plans-payment.jpg";
 import plansItinerary from "@/assets/plans-itinerary.jpg";
 
 const highlights = [
@@ -14,7 +14,7 @@ const highlights = [
   },
   {
     icon: Wallet,
-    image: plansTravel,
+    image: plansPayment,
     title: "Pagamento fácil e sem aperto",
     text: "Nossos preços são acessíveis e o pagamento é facilitado no carnê, dividido em parcelas pequenas que cabem na sua rotina. Você paga aos poucos, sem sufoco, e realiza o sonho de viajar com tranquilidade.",
   },
